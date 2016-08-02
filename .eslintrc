@@ -1,0 +1,22 @@
+{
+  "extends": "eslint",
+  "env": {
+    "node": true,
+    "browser": true,
+    "es6": true
+  },
+  "rules": {
+    "quotes": [
+      2,
+      "single",
+      "avoid-escape"
+    ],
+     "func-style": [
+      0,
+      "declaration"
+    ],
+     "new-cap": [
+      0
+    ]
+  }
+}

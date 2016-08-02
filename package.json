@@ -1,0 +1,48 @@
+{
+    "name": "structuring-apps-with-snabbdom",
+    "version": "0.0.0",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/v-dom/structuring-app-with-snabbdom"
+    },
+    "author": "suxxus",
+    "license": "ISC",
+    "description": "recreation of examples, to understand how to structure an app with Snabbdom",
+    "scripts": {
+        "clean": "rimraf ./build/*",
+        "browsersync": "node browser-sync",
+        "build:js": "NODE_PATH=src browserify -d src/scripts/index.js > ./build/bundle.js",
+        "build:css": "cat ./src/styles/main.css > ./build/main.css",
+        "build:markup": "cat ./src/index.html > ./build/index.html",
+        "build": "npm run build:js && npm run build:markup && npm run build:css",
+        "dev": "watch -p 'src/**/*' -c 'npm run clean && npm run build & npm run lint'",
+        "devc": "watch -p 'src/**/*' -c 'npm run test'",
+        "lint": "eslint --color  src || true",
+        "test": "NODE_PATH=src tape src/tests | tap-colorize",
+        "check": "npm outdated --depth=0",
+        "update": "updtr"
+    },
+    "devDependencies": {
+        "browser-sync": "2.14.0",
+        "browserify": "13.1.0",
+        "eslint": "3.2.2",
+        "eslint-cli": "1.1.0",
+        "eslint-config-eslint": "3.0.0",
+        "mock": "0.1.1",
+        "proxy-middleware": "0.15.0",
+        "rimraf": "2.5.4",
+        "sinon": "1.17.5",
+        "tap-colorize": "1.2.0",
+        "tape": "4.6.0",
+        "updtr": "0.2.1",
+        "watch-cli": "0.2.1"
+    },
+    "keywords": [
+        "snabbdom",
+        "v-dom",
+        "studies"
+    ],
+    "dependencies": {
+        "snabbdom": "0.5.1"
+    }
+}
