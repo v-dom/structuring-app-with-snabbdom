@@ -16,7 +16,7 @@
     "build:markup": "cat ./src/index.html > ./build/index.html",
     "build": "npm run build:js && npm run build:markup && npm run build:css",
     "dev": "watch -p 'src/**/*' -c 'npm run clean && npm run build & npm run lint'",
-    "devc": "watch -p 'src/**/*' -c 'npm run test'",
+    "devc": "watch -p 'src/**/*' -c 'npm run test & npm run lint'",
     "lint": "eslint --color  src || true",
     "test": "NODE_PATH=src tape src/tests | tap-colorize",
     "check": "npm outdated --depth=0",

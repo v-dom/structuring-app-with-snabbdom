@@ -3,7 +3,7 @@
 var test = require('tape');
 var h = require('snabbdom/h');
 var sinon = require('sinon');
-var main = require('scripts/input-comp')
+var main = require('scripts/input-comp');
 
 var before = test;
 var after = test;

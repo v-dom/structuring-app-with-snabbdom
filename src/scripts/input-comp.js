@@ -1,7 +1,6 @@
 'use strict';
 
 module.exports = function(h) {
-
     return function(name, update) {
         return h('div', [
             h('input', {
