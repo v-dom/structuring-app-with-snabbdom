@@ -6,18 +6,23 @@ module.exports = function(h) {
 
       h('button.inc', {
         on: {
-          click: [props.callback, props.INC]
+          click: [props.callback, {
+            type: props.INC,
+            value: props.value
+          }]
         }
-      }),
+      }, '+'),
 
       h('button.dec', {
         on: {
-          click: [props.callback, props.DEC]
+          click: [props.callback, {
+            type: props.DEC,
+            value: props.value
+          }]
         }
-      }),
+      }, '-'),
 
       h('div', ('value: ' + props.value))
-
     ]);
   };
 };
